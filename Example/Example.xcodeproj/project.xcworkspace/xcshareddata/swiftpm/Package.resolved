@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "WWPrint",
+        "repositoryURL": "https://github.com/William-Weng/WWPrint.git",
+        "state": {
+          "branch": null,
+          "revision": "e4ad2863717465f224aa676f10a3a7ff1df58f7c",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "WWSlider",
+        "repositoryURL": "https://github.com/William-Weng/WWSlider.git",
+        "state": {
+          "branch": null,
+          "revision": "3d59ea57ac58d7fa40173d5c16d7ddadfa18c65f",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
