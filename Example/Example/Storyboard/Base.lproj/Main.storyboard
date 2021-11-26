@@ -147,12 +147,26 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2b-zG-XEp">
+                                <rect key="frame" x="145" y="172" width="124" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="AsA-Dh-PJk"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="當成進度條使用"/>
+                                <buttonConfiguration key="configuration" style="filled" title="當成進度條使用"/>
+                                <connections>
+                                    <action selector="testPregress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQv-2Q-sio"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="l2b-zG-XEp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1pd-8n-Vxe"/>
                             <constraint firstItem="ZbE-6F-bPs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pz-nB-BVE"/>
                             <constraint firstItem="M3D-hb-RyI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tY-9U-7fe"/>
+                            <constraint firstItem="ZbE-6F-bPs" firstAttribute="top" secondItem="l2b-zG-XEp" secondAttribute="bottom" constant="20" id="oi2-id-Yp7"/>
                             <constraint firstItem="M3D-hb-RyI" firstAttribute="top" secondItem="ZbE-6F-bPs" secondAttribute="bottom" constant="50" id="xtc-FN-Lzy"/>
                             <constraint firstItem="ZbE-6F-bPs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="zxE-vA-BgN"/>
                         </constraints>

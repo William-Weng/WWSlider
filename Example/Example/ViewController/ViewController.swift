@@ -9,7 +9,7 @@
 import UIKit
 import WWPrint
 import WWSlider
- 
+
 @IBDesignable class MySlider: WWSlider {}
 
 final class ViewController: UIViewController {
@@ -40,6 +40,8 @@ final class ViewController: UIViewController {
         myProgressView2.configure(id: "\(Identifier.segmented)", initValue: "5/\(count)", font: .systemFont(ofSize: 20), icon: icon.segmented, type: .segmented(count))
         myProgressView3.configure(id: "\(Identifier.segmented2)", initValue: "0", font: .systemFont(ofSize: 24), icon: icon.segmented2, type: .segmented(count))
     }
+    
+    @IBAction func testPregress(_ sender: UIButton) { progressTest() }
 }
 
 // MARK: - ProgressViewDeleagte
