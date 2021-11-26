@@ -105,13 +105,19 @@ extension WWSlider {
         horizontalDisplayImageView.image = icon
     }
     
-    /// 及時畫面重繪 => @IBDesignable
-    public func redrawOnStoryboard() {
-
-        initSetting()
+    /// 直接設定數值，當進度條用
+    /// - Parameters:
+    ///   - constant: CGFloat
+    ///   - info: ProgressViewDeleagte.ProgressViewInfomation
+    /// - Returns: CGFloat
+    public func valueSetting(constant: CGFloat, info: SliderDeleagte.SliderInfomation) -> CGFloat {
         
-        #if TARGET_INTERFACE_BUILDER
-        #endif
+        touchPoint.constant = constant
+        
+        constraintSetting(isVertical: isVertical, constant: touchPoint.constant, type: progressType)
+        valueSetting(isVertical: isVertical, info: info)
+        
+        return touchPoint.constant
     }
 }
 
@@ -152,6 +158,15 @@ extension WWSlider {
         }
     }
     
+    /// 及時畫面重繪 => @IBDesignable
+    private func redrawOnStoryboard() {
+
+        initSetting()
+        
+        #if TARGET_INTERFACE_BUILDER
+        #endif
+    }
+    
     /// 記錄點擊的起點位置
     /// - Parameters:
     ///   - touches: Set<UITouch>
@@ -178,11 +193,21 @@ extension WWSlider {
         touchPoint.constant += isVertical ? (startTouchPoint.y - endTouchPoint.y) : (endTouchPoint.x - startTouchPoint.x)
         touchPoint.constant = safeTouchPointConstant(touchPoint.constant, isVertical: isVertical)
         
+        constraintSetting(isVertical: isVertical, constant: touchPoint.constant, type: progressType)
+    }
+    
+    /// 刻度設定
+    /// - Parameters:
+    ///   - isVertical: 水平 / 垂直
+    ///   - constant: CGFloat
+    ///   - type: ProgressType
+    private func constraintSetting(isVertical: Bool, constant: CGFloat, type: ProgressType) {
+        
         if (isVertical) {
-            verticalConstraint.constant = safeConstraint(touchPoint.constant, progressType: progressType)
+            verticalConstraint.constant = safeConstraint(constant, progressType: type)
             valueChangeAction(verticalConstraint.constant, isVertical: isVertical)
         } else {
-            horizontalConstraint.constant = safeConstraint(touchPoint.constant, progressType: progressType)
+            horizontalConstraint.constant = safeConstraint(constant, progressType: type)
             valueChangeAction(horizontalConstraint.constant, isVertical: isVertical)
         }
     }
@@ -236,6 +261,15 @@ extension WWSlider {
         else {
             return
         }
+        
+        valueSetting(isVertical: isVertical, info: info)
+    }
+    
+    /// 設定相關文字及圖示
+    /// - Parameters:
+    ///   - isVertical: 水平 / 垂直
+    ///   - info: ProgressViewInfomation
+    private func valueSetting(isVertical: Bool, info: SliderDeleagte.SliderInfomation) {
         
         displayLabel.text = info.text
         

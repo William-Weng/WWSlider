@@ -21,6 +21,8 @@ final class ViewController: UIViewController {
     private let count: UInt = 10
     private let icon: (continuous: UIImage, segmented: UIImage, segmented2: UIImage) = (#imageLiteral(resourceName: "SoundOn"), #imageLiteral(resourceName: "WifiOn"), #imageLiteral(resourceName: "BulbOn"))
     
+    private var constant: CGFloat = 0
+    
     private enum Identifier: String {
         case continuous = "continuous"
         case segmented = "segmented"
@@ -101,5 +103,16 @@ extension ViewController {
         }
         
         return (text: "\(level)", icon: icon)
+    }
+    
+    /// 測試設定進度條
+    private func progressTest() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            
+            let _ = self.myProgressView1.valueSetting(constant: self.constant, info: (text: "\(self.constant)", icon: self.icon.continuous))
+            self.constant += 10
+            self.progressTest()
+        }
     }
 }
