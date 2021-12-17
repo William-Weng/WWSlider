@@ -37,7 +37,7 @@ final class ViewController: UIViewController {
         myProgressView3.myDeleagte = self
         
         myProgressView1.configure(id: "\(Identifier.continuous)", initValue: "50%", font: .systemFont(ofSize: 16), icon: icon.continuous, type: .continuous)
-        myProgressView2.configure(id: "\(Identifier.segmented)", initValue: "5/\(count)", font: .systemFont(ofSize: 20), icon: icon.segmented, type: .segmented(count, .blue, 1.0))
+        myProgressView2.configure(id: "\(Identifier.segmented)", initValue: "5/\(count)", font: .systemFont(ofSize: 20), icon: nil, type: .segmented(count, .gray, 1.0))
         myProgressView3.configure(id: "\(Identifier.segmented2)", initValue: "0", font: .systemFont(ofSize: 24), icon: icon.segmented2, type: .segmented(count))
     }
     
@@ -79,17 +79,8 @@ extension ViewController {
     
     /// 分段的顯示效果
     private func segmentedTypeInfo(currentValue: CGFloat, maximumValue: CGFloat) -> SliderDeleagte.SliderInfomation {
-        
         let index = Int(currentValue * CGFloat(count) / maximumValue)
-        var icon = #imageLiteral(resourceName: "WifiOff")
-        
-        switch index {
-        case 3...6: icon = #imageLiteral(resourceName: "WifiOn")
-        case 7...: icon = #imageLiteral(resourceName: "WifiFull")
-        default: icon = #imageLiteral(resourceName: "WifiOff")
-        }
-        
-        return (text: "\(index)/\(count)", icon: icon)
+        return (text: "\(index)/\(count)", icon: nil)
     }
     
     /// 分段的顯示效果2
