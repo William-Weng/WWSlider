@@ -35,9 +35,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svl-EK-vI1">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-kq-Oa5">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYi-op-yQZ">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
@@ -64,6 +61,9 @@
                                 </view>
                             </subviews>
                         </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-kq-Oa5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -80,9 +80,6 @@
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-OF-ac7">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="LX6-34-Bgx">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="41O-UJ-pxz">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
@@ -105,6 +102,9 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="LX6-34-Bgx">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
