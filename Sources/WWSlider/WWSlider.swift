@@ -5,7 +5,7 @@
 //  Created by William.Weng on 2021/11/22.
 //
 /// [Swift packages: Resources and localization - WWDC20 - Videos - Apple Developer](https://developer.apple.com/videos/play/wwdc2020/10169/)
-
+ 
 import UIKit
 
 public protocol SliderDeleagte: AnyObject {
@@ -26,7 +26,7 @@ public protocol SliderDeleagte: AnyObject {
     
     public enum ProgressType {
         case continuous
-        case segmented(_ count: UInt)
+        case segmented(_ count: UInt , _ color: UIColor = .clear, _ constant: CGFloat = 1.0)
     }
     
     @IBInspectable public var isVertical: Bool = true
@@ -43,11 +43,13 @@ public protocol SliderDeleagte: AnyObject {
     
     @IBOutlet weak var verticalView: UIView!
     @IBOutlet weak var verticalProgressView: UIView!
+    @IBOutlet weak var verticalScaleStackView: UIStackView!
     @IBOutlet weak var verticalDisplayImageView: UIImageView!
     @IBOutlet weak var verticalConstraint: NSLayoutConstraint!
-
+    
     @IBOutlet weak var horizontalView: UIView!
     @IBOutlet weak var horizontalProgressView: UIView!
+    @IBOutlet weak var horizontalScaleStackView: UIStackView!
     @IBOutlet weak var horizontalDisplayImageView: UIImageView!
     @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
 
@@ -67,7 +69,7 @@ public protocol SliderDeleagte: AnyObject {
         super.init(coder: aDecoder)
         initViewFromXib()
     }
-    
+        
     override public func draw(_ rect: CGRect) { redrawOnStoryboard() }
     
     /// [IB Designables: Failed to render and update auto layout status](https://stackoverflow.com/questions/46723683/ib-designables-failed-to-render-and-update-auto-layout-status)
@@ -97,12 +99,20 @@ extension WWSlider {
                 
         identifier = id
         progressType = type
-                
+        
         displayLabel.font = font
         displayLabel.text = initValue
         
         verticalDisplayImageView.image = icon
         horizontalDisplayImageView.image = icon
+        
+        verticalScaleStackView.autoresizesSubviews = true
+        horizontalScaleStackView.autoresizesSubviews = true
+        
+        switch type {
+        case .continuous: break
+        case .segmented(let count, let color, let constant): segmentedLineSetting(with: count, color: color, constant: constant)
+        }
     }
     
     /// 直接設定數值，當進度條用
@@ -219,7 +229,7 @@ extension WWSlider {
                 
         switch progressType {
         case .continuous: return safeTouchPointConstant(touchPointConstant, isVertical: isVertical)
-        case .segmented(let count): return safeSegmentedConstraint(count, touchPointConstant: touchPointConstant, isVertical: isVertical)
+        case .segmented(let count, _, _): return safeSegmentedConstraint(count, touchPointConstant: touchPointConstant, isVertical: isVertical)
         }
     }
     
@@ -289,4 +299,26 @@ extension WWSlider {
     
     /// 清除/還原一些設定值
     private func clean() { touchPoint.start = nil }
+    
+    /// [設定分段線的長相 (數量 / 顏色 / 寬度)](https://www.jianshu.com/p/213702004d0d)
+    /// - Parameters:
+    ///   - count: [UInt](https://medium.com/彼得潘的-swift-ios-app-開發問題解答集/從程式動態加-view-到-stack-view-e5c2a2d01575)
+    ///   - color: UIColor?
+    ///   - constant: CGFloat
+    private func segmentedLineSetting(with count: UInt, color: UIColor?, constant: CGFloat) {
+        
+        for index in 0...count {
+            
+            let view = UIView()
+            view.backgroundColor = (index != 0 && index != count) ? color : .clear
+            
+            if !isVertical {
+                view.widthAnchor.constraint(equalToConstant: constant).isActive = true
+                horizontalScaleStackView.addArrangedSubview(view)
+            } else {
+                view.heightAnchor.constraint(equalToConstant: constant).isActive = true
+                verticalScaleStackView.addArrangedSubview(view)
+            }
+        }
+    }
 }

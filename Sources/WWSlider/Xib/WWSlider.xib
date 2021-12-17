@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,11 +16,13 @@
                 <outlet property="horizontalConstraint" destination="MoR-aH-g9I" id="2m2-NS-g5C"/>
                 <outlet property="horizontalDisplayImageView" destination="G2I-QW-ikz" id="pOd-bF-dl2"/>
                 <outlet property="horizontalProgressView" destination="rNN-7l-1qB" id="94p-zr-c7i"/>
+                <outlet property="horizontalScaleStackView" destination="ZtB-kq-Oa5" id="snO-rj-uIt"/>
                 <outlet property="horizontalView" destination="svl-EK-vI1" id="Xcy-0g-mZG"/>
                 <outlet property="iconPositionConstraint" destination="nCv-RQ-ss9" id="nMT-7m-7B2"/>
                 <outlet property="verticalConstraint" destination="Qbo-QD-8DY" id="IeC-UX-coc"/>
                 <outlet property="verticalDisplayImageView" destination="RJm-ku-GvI" id="w8j-Af-reW"/>
                 <outlet property="verticalProgressView" destination="Loc-Jn-ev1" id="Rn8-gu-BIC"/>
+                <outlet property="verticalScaleStackView" destination="LX6-34-Bgx" id="exm-4p-rl2"/>
                 <outlet property="verticalView" destination="hkT-OF-ac7" id="YZh-3k-n7M"/>
             </connections>
         </placeholder>
@@ -31,6 +34,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svl-EK-vI1">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-kq-Oa5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYi-op-yQZ">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
@@ -63,12 +69,19 @@
                         <constraint firstItem="CYi-op-yQZ" firstAttribute="top" secondItem="svl-EK-vI1" secondAttribute="top" id="HdP-PT-DO8"/>
                         <constraint firstItem="CYi-op-yQZ" firstAttribute="leading" secondItem="svl-EK-vI1" secondAttribute="leading" id="Rlu-l2-3rQ"/>
                         <constraint firstAttribute="bottom" secondItem="CYi-op-yQZ" secondAttribute="bottom" id="bvH-po-4bz"/>
+                        <constraint firstAttribute="bottom" secondItem="ZtB-kq-Oa5" secondAttribute="bottom" id="bxQ-EY-Tpn"/>
+                        <constraint firstItem="ZtB-kq-Oa5" firstAttribute="leading" secondItem="svl-EK-vI1" secondAttribute="leading" id="fl3-nm-Mm9"/>
                         <constraint firstAttribute="trailing" secondItem="CYi-op-yQZ" secondAttribute="trailing" id="i49-me-iGY"/>
+                        <constraint firstItem="ZtB-kq-Oa5" firstAttribute="top" secondItem="svl-EK-vI1" secondAttribute="top" id="imu-fs-GZm"/>
+                        <constraint firstAttribute="trailing" secondItem="ZtB-kq-Oa5" secondAttribute="trailing" id="ukS-Qt-apj"/>
                     </constraints>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkT-OF-ac7">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="LX6-34-Bgx">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="41O-UJ-pxz">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
@@ -96,8 +109,12 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="41O-UJ-pxz" firstAttribute="leading" secondItem="hkT-OF-ac7" secondAttribute="leading" id="08q-mw-TbF"/>
+                        <constraint firstAttribute="bottom" secondItem="LX6-34-Bgx" secondAttribute="bottom" id="Q6c-Ly-lHV"/>
+                        <constraint firstItem="LX6-34-Bgx" firstAttribute="top" secondItem="hkT-OF-ac7" secondAttribute="top" id="Vor-yU-emY"/>
                         <constraint firstAttribute="trailing" secondItem="41O-UJ-pxz" secondAttribute="trailing" id="acF-7g-0Zf"/>
                         <constraint firstAttribute="bottom" secondItem="41O-UJ-pxz" secondAttribute="bottom" id="fPc-xV-ItB"/>
+                        <constraint firstItem="LX6-34-Bgx" firstAttribute="leading" secondItem="hkT-OF-ac7" secondAttribute="leading" id="gdK-Rj-djD"/>
+                        <constraint firstAttribute="trailing" secondItem="LX6-34-Bgx" secondAttribute="trailing" id="kXa-bE-rgp"/>
                         <constraint firstItem="41O-UJ-pxz" firstAttribute="top" secondItem="hkT-OF-ac7" secondAttribute="top" id="nZY-Bb-tfj"/>
                     </constraints>
                 </view>
