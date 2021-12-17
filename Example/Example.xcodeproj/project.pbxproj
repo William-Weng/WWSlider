@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DA274152750D9CD008236CB /* WWSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 3DA274142750D9CD008236CB /* WWSlider */; };
 		3DBCD87426F198EF00522E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCD87326F198EF00522E3B /* AppDelegate.swift */; };
 		3DBCD87826F198EF00522E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBCD87726F198EF00522E3B /* ViewController.swift */; };
 		3DBCD87B26F198EF00522E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87926F198EF00522E3B /* Main.storyboard */; };
 		3DBCD87D26F198F300522E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87C26F198F300522E3B /* Assets.xcassets */; };
 		3DBCD88026F198F300522E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87E26F198F300522E3B /* LaunchScreen.storyboard */; };
+		3DC6B4C7276C63EA0032F705 /* WWSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 3DC6B4C6276C63EA0032F705 /* WWSlider */; };
 		3DF5A4AF2750829A009A8938 /* WWPrint in Frameworks */ = {isa = PBXBuildFile; productRef = 3DF5A4AE2750829A009A8938 /* WWPrint */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF5A4AF2750829A009A8938 /* WWPrint in Frameworks */,
-				3DA274152750D9CD008236CB /* WWSlider in Frameworks */,
+				3DC6B4C7276C63EA0032F705 /* WWSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +118,7 @@
 			name = Example;
 			packageProductDependencies = (
 				3DF5A4AE2750829A009A8938 /* WWPrint */,
-				3DA274142750D9CD008236CB /* WWSlider */,
+				3DC6B4C6276C63EA0032F705 /* WWSlider */,
 			);
 			productName = Example;
 			productReference = 3DBCD87026F198EF00522E3B /* Example.app */;
@@ -149,7 +149,7 @@
 			mainGroup = 3DBCD86726F198EF00522E3B;
 			packageReferences = (
 				3DF5A4AD2750829A009A8938 /* XCRemoteSwiftPackageReference "WWPrint" */,
-				3DA274132750D9CD008236CB /* XCRemoteSwiftPackageReference "WWSlider" */,
+				3DC6B4C5276C63EA0032F705 /* XCRemoteSwiftPackageReference "WWSlider" */,
 			);
 			productRefGroup = 3DBCD87126F198EF00522E3B /* Products */;
 			projectDirPath = "";
@@ -385,12 +385,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3DA274132750D9CD008236CB /* XCRemoteSwiftPackageReference "WWSlider" */ = {
+		3DC6B4C5276C63EA0032F705 /* XCRemoteSwiftPackageReference "WWSlider" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWSlider.git";
+			repositoryURL = "https://github.com/William-Weng/WWSlider";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.1.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 		3DF5A4AD2750829A009A8938 /* XCRemoteSwiftPackageReference "WWPrint" */ = {
@@ -404,9 +404,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3DA274142750D9CD008236CB /* WWSlider */ = {
+		3DC6B4C6276C63EA0032F705 /* WWSlider */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3DA274132750D9CD008236CB /* XCRemoteSwiftPackageReference "WWSlider" */;
+			package = 3DC6B4C5276C63EA0032F705 /* XCRemoteSwiftPackageReference "WWSlider" */;
 			productName = WWSlider;
 		};
 		3DF5A4AE2750829A009A8938 /* WWPrint */ = {

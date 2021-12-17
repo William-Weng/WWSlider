@@ -29,77 +29,46 @@
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="300"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.297555313629358" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="precent">
-                                                <real key="value" value="300"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
+                                                <real key="value" value="150"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="systemYellowColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
-                                                <real key="value" value="150"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPosition">
-                                                <real key="value" value="200"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
                                                 <color key="value" systemColor="systemYellowColor"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
-                                                <color key="value" white="0.33333333329999998" alpha="0.10249214431866496" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="systemYellowColor"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelHeightPosition">
-                                                <real key="value" value="200"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelWidthPosition">
-                                                <real key="value" value="24"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chT-k7-K9Q" customClass="MySlider" customModule="Example" customModuleProvider="target">
                                         <rect key="frame" x="98" y="0.0" width="82" height="300"/>
                                         <color key="backgroundColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="precent">
-                                                <real key="value" value="300"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="AccentColor"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
                                                 <real key="value" value="150"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPosition">
-                                                <real key="value" value="200"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                                <color key="value" name="AccentColor"/>
+                                                <color key="value" systemColor="systemGreenColor"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
-                                                <color key="value" white="0.33333333329999998" alpha="0.18364783047007865" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="0.64939828470000005" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelHeightPosition">
-                                                <real key="value" value="200"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelWidthPosition">
-                                                <real key="value" value="24"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -117,44 +86,31 @@
                                     <constraint firstAttribute="height" constant="60" id="i7S-I7-ukO"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="precent">
-                                        <real key="value" value="300"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
                                         <real key="value" value="150"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
-                                        <real key="value" value="100"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
                                         <color key="value" systemColor="systemPinkColor"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
-                                        <color key="value" white="0.33333333329999998" alpha="0.1836478305" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="labelHeightPosition">
-                                        <real key="value" value="200"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="labelWidthPosition">
-                                        <real key="value" value="24"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2b-zG-XEp">
-                                <rect key="frame" x="145" y="172" width="124" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2b-zG-XEp">
+                                <rect key="frame" x="80" y="152" width="254" height="56"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="AsA-Dh-PJk"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="當成進度條使用"/>
-                                <buttonConfiguration key="configuration" style="filled" title="當成進度條使用"/>
+                                <state key="normal" title="當成進度條使用">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="testPregress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQv-2Q-sio"/>
                                 </connections>
@@ -166,7 +122,8 @@
                             <constraint firstItem="l2b-zG-XEp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1pd-8n-Vxe"/>
                             <constraint firstItem="ZbE-6F-bPs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pz-nB-BVE"/>
                             <constraint firstItem="M3D-hb-RyI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tY-9U-7fe"/>
-                            <constraint firstItem="ZbE-6F-bPs" firstAttribute="top" secondItem="l2b-zG-XEp" secondAttribute="bottom" constant="20" id="oi2-id-Yp7"/>
+                            <constraint firstItem="ZbE-6F-bPs" firstAttribute="top" secondItem="l2b-zG-XEp" secondAttribute="bottom" constant="40" id="oi2-id-Yp7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l2b-zG-XEp" secondAttribute="trailing" constant="80" id="uT5-Nz-JSh"/>
                             <constraint firstItem="M3D-hb-RyI" firstAttribute="top" secondItem="ZbE-6F-bPs" secondAttribute="bottom" constant="50" id="xtc-FN-Lzy"/>
                             <constraint firstItem="ZbE-6F-bPs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="zxE-vA-BgN"/>
                         </constraints>
@@ -190,11 +147,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

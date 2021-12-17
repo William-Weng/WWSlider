@@ -12,11 +12,11 @@
       },
       {
         "package": "WWSlider",
-        "repositoryURL": "https://github.com/William-Weng/WWSlider.git",
+        "repositoryURL": "https://github.com/William-Weng/WWSlider",
         "state": {
-          "branch": null,
-          "revision": "750d578782b31874f4b51b5402ba7a8e35c7aa10",
-          "version": "1.1.0"
+          "branch": "main",
+          "revision": "facd51dbe90d3d1fb95fbc1978481af9ce27643e",
+          "version": null
         }
       }
     ]

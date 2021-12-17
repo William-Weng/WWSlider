@@ -18,7 +18,8 @@
                 <outlet property="horizontalProgressView" destination="rNN-7l-1qB" id="94p-zr-c7i"/>
                 <outlet property="horizontalScaleStackView" destination="ZtB-kq-Oa5" id="snO-rj-uIt"/>
                 <outlet property="horizontalView" destination="svl-EK-vI1" id="Xcy-0g-mZG"/>
-                <outlet property="iconPositionConstraint" destination="nCv-RQ-ss9" id="nMT-7m-7B2"/>
+                <outlet property="iconHorizontalPositionConstraint" destination="knH-4w-XOE" id="gE0-W1-0PU"/>
+                <outlet property="iconVerticalPositionConstraint" destination="nCv-RQ-ss9" id="uW6-u7-gEU"/>
                 <outlet property="verticalConstraint" destination="Qbo-QD-8DY" id="IeC-UX-coc"/>
                 <outlet property="verticalDisplayImageView" destination="RJm-ku-GvI" id="w8j-Af-reW"/>
                 <outlet property="verticalProgressView" destination="Loc-Jn-ev1" id="Rn8-gu-BIC"/>

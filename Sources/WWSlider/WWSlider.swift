@@ -39,8 +39,9 @@ public protocol SliderDeleagte: AnyObject {
     @IBInspectable public var identifier: String = "ProgressView"
 
     @IBOutlet weak var displayLabel: UILabel!
-    @IBOutlet weak var iconPositionConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var iconVerticalPositionConstraint: NSLayoutConstraint!
+    @IBOutlet weak var iconHorizontalPositionConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var verticalView: UIView!
     @IBOutlet weak var verticalProgressView: UIView!
     @IBOutlet weak var verticalScaleStackView: UIStackView!
@@ -154,15 +155,16 @@ extension WWSlider {
         layer.borderColor = borderColor.cgColor
         
         touchPoint.constant = safeTouchPointConstant(currentValue, isVertical: isVertical)
-        iconPositionConstraint.constant = iconPosition
         
         verticalView.isHidden = !isVertical
         horizontalView.isHidden = isVertical
         
         if (isVertical) {
+            iconVerticalPositionConstraint.constant = iconPosition
             verticalProgressView.backgroundColor = progressColor
             verticalConstraint.constant = touchPoint.constant
         } else {
+            iconHorizontalPositionConstraint.constant = iconPosition
             horizontalProgressView.backgroundColor = progressColor
             horizontalConstraint.constant = touchPoint.constant
         }
