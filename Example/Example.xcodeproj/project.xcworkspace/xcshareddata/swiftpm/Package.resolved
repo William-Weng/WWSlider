@@ -14,9 +14,9 @@
         "package": "WWSlider",
         "repositoryURL": "https://github.com/William-Weng/WWSlider",
         "state": {
-          "branch": "main",
-          "revision": "facd51dbe90d3d1fb95fbc1978481af9ce27643e",
-          "version": null
+          "branch": null,
+          "revision": "56b82775d9252c8ae210f62e06ee76f8a5b5048b",
+          "version": "1.2.0"
         }
       }
     ]
